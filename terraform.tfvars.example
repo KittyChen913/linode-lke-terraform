@@ -1,0 +1,18 @@
+# Linode API Configuration
+# Replace with your actual Linode API token
+linode_token = "YOUR_LINODE_API_TOKEN_HERE"
+
+# LKE Cluster Configuration
+# Customize these values according to your needs
+cluster_label      = "nginx-cluster"
+cluster_region     = "us-central"  # Options: us-central, us-west, us-southeast, eu-west, ap-south, ap-northeast, ap-southeast
+node_pool_count    = 3
+node_pool_type     = "g6-standard-1"  # Options: g6-nanode-1, g6-standard-1, g6-standard-2, etc.
+
+# Kubernetes Deployment Configuration
+deployment_name      = "web-server"
+deployment_namespace = "default"
+deployment_replicas  = 3
+app_label            = "nginx"
+container_image      = "nginx:1.14.2"
+container_port       = 80

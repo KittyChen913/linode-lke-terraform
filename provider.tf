@@ -1,0 +1,22 @@
+terraform {
+  required_version = ">= 1.0"
+  required_providers {
+    linode = {
+      source  = "linode/linode"
+      version = "~> 2.0"
+    }
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.0"
+    }
+  }
+}
+
+provider "linode" {
+  token = var.linode_token
+}
+
+provider "kubernetes" {
+  config_path = local_file.kubeconfig.filename
+}
+
